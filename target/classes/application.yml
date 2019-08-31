@@ -1,0 +1,21 @@
+server:
+  port: 8095
+
+spring:
+  datasource:
+    initialization-mode: never
+    jmx-enabled: false
+    url: jdbc:mysql://localhost:3336/mooc_all?useUnicode=true&amp;characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    username: root
+    password: "*HM2Ll!#7VCg1K_19F#3@tJ"
+
+  profiles:
+    include:
+      - redis
+      - resource
+
+mybatis:
+  config-location: "classpath:mybatis-config.xml"
+  check-config-location: true
+  mapper-locations: "classpath:mapper/*.xml"
+
